@@ -3,7 +3,7 @@
 	"tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: g++.exe build active file",
+            "label": "windows",
             "command": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
             "args": [
                 "-g",
@@ -34,6 +34,39 @@
                 "isDefault": true
             },
             "detail": "compiler: \"C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe\""
+        },
+        {
+            "type": "cppbuild",
+            "label": "linux",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-g",
+                "${file}",
+                "-I",
+                "/usr/local/include/opencv4",
+                "-L",
+                "/usr/local/lib",
+                "-o",
+                "/home/alimst/github_exe/linux/${fileBasenameNoExtension}",
+                "-lgmp",
+                "-lopencv_calib3d",
+                "-lopencv_core",
+                "-lopencv_features2d",
+                "-lopencv_imgproc",
+                "-lopencv_imgcodecs",
+                "-lopencv_highgui"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "compiler: /usr/bin/g++"
         }
     ]
 }

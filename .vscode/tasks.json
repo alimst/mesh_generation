@@ -47,7 +47,7 @@
                 "-L",
                 "/usr/local/lib",
                 "-o",
-                "/home/alimst/github_exe/linux/${fileBasenameNoExtension}",
+                "/home/alimst/github_exe/mesh_generation/${fileBasenameNoExtension}",
                 "-lgmp",
                 "-lopencv_calib3d",
                 "-lopencv_core",

@@ -14,7 +14,8 @@ Consider the "boy.png" image from the "/images" folder as shown below:
 
 A list of non-uniformly-sampled 3D points from the "boy.png" image is provided in file "/inputs/boy_ed_4%.dat". This file is used as the input to the "make_mesh" program and a Delaunay triangulation is generated and stored in "output/boy_4%_tri.off" in .OFF format. A screenshot of the OFF file displyed by the MeshLab software is provided in file "output/boy_4%_mesh.png" as shown below:
 
-<img src="output/boy_4%_mesh.png" width="200">
+<img src="output/boy.png" width="512">
+
 
 hello
 

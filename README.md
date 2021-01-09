@@ -31,7 +31,7 @@ Then, the mesh is rasterized to integer grid points with the resolution same as 
 
 <img src="output/boy-rec-img.png">
 
-The PNM image format can be viewed online at: http://paulcuth.me.uk/netpbm-viewer/ or can be converted to other image formats at: https://convertio.co/pnm-png/
+The PNM image format can be viewed online at: http://paulcuth.me.uk/netpbm-viewer/ or can be converted to other image formats at: https://convertio.co/pnm-png/. Just to grab your attention, this image was reconstructed using only 4% of all the pixels in the orignal image. 
 
 If OpenCV is installed on your machine any common image formats can be used (i.e., JPG, PNG, ...) in the output image name. To enable the OpenCV functionality the "OPENVC_INSTALLED" macro must be first defined at the beginning of the file "make_mesh.cpp". More details are given inside the file "make_mesh.cpp".
 

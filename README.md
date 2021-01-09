@@ -1,6 +1,8 @@
 # Mesh Generation Project
 ## Summary ##
-This program does the following in order:
+Thanks for your time to visit my Github page :)
+
+Below is the summary of what the "make_mesh.cpp" program does in order:
 1. Read a list of 3D points from the input text file. The points are assumed to be obtained as the result of a non-uniform sampling from a grayscale image. 
 2. Generate the 2D Delaunay triangulation from the (x,y) coordinates of the input points.
 3. Rasterize the mesh to integer grid points and write the reconstructed image to the output file.
@@ -26,6 +28,6 @@ Then, the mesh is rasterized to integer grid points with the resolution same as 
 
 The PNM image format can be viewed online at: http://paulcuth.me.uk/netpbm-viewer/ or can be converted to other image formats at: https://convertio.co/pnm-png/
 
-If OpenCV is installed on your machine any common image formats can be used (i.e., JPG, PNG, ...) in the output image. To enable the OpenCV functionlity the "OPENVC_INSTALLED" macro must be first defined at the beginning of the file "make_mesh.cpp". More details are given inside the file "make_mesh.cpp".
+If OpenCV is installed on your machine any common image formats can be used (i.e., JPG, PNG, ...) in the output image name. To enable the OpenCV functionality the "OPENVC_INSTALLED" macro must be first defined at the beginning of the file "make_mesh.cpp". More details are given inside the file "make_mesh.cpp".
 
 

@@ -12,13 +12,10 @@ Consider the "boy.png" image from the "/images" folder as shown below:
 
 <img src="images/boy.png">
 
-A list of non-uniformly-sampled 3D points from the "boy.png" image is provided in file "/inputs/boy_ed_4%.dat". This file is used as the input to the "make_mesh" program and a Delaunay triangulation is generated and stored in "output/boy_4%_tri.off" in .OFF format. A screenshot of the OFF file displyed by the MeshLab software is provided in file "output/boy_4%_mesh.png" as shown below:
-
-<img src="output/boy-img.png">
+A list of non-uniformly-sampled 3D points from the "boy.png" image is provided in file "/inputs/boy_ed_4%.dat". The "4%" in the file name means that about 4% of total number of pixels (~= 0.04*512*512) in the image is used. This file is used as the input to the "make_mesh" program and a Delaunay triangulation is generated as stored in "output/boy-tri.off" in .OFF format. A screenshot of the OFF file displyed by the MeshLab software is provided in file "output/boy-mesh.png" as shown below:
 
 <img src="output/boy-mesh.png" width="512">
 
-<img src="output/boy-4%-mesh.png" width="512">
 
 hello
 

@@ -9,7 +9,12 @@ Below is the summary of what the "make_mesh.cpp" program does in order:
 
 For further implementation details please refer to the description included in file "make_mesh.cpp"
 
-## Example ##
+## Build Note ##
+The "make_mesh.cpp" file can be built with g++ compiler either in Linux or with MinGW in Windows. The CGAL library is required for building the code (https://doc.cgal.org/latest/Manual/general_intro.html). The OpenCV library is optional for generating the output images of common formats. 
+
+File ".vscodes/tasks.json" contains two build configurations: one for "windows" and one for "linux". The "windows" configuration shows an example on how to include required CGAL directories and link the libraries. The "linux" configuration provides an example on how to inlucde CGAL and OpenCV directories and link the required libraries. Locations of the include and library directories must be updated based on your own machine.
+
+## Usage Example ##
 Consider the "boy.png" image from the "/images" folder as shown below: 
 
 <img src="images/boy.png">
@@ -30,4 +35,5 @@ The PNM image format can be viewed online at: http://paulcuth.me.uk/netpbm-viewe
 
 If OpenCV is installed on your machine any common image formats can be used (i.e., JPG, PNG, ...) in the output image name. To enable the OpenCV functionality the "OPENVC_INSTALLED" macro must be first defined at the beginning of the file "make_mesh.cpp". More details are given inside the file "make_mesh.cpp".
 
-
+## Contact ##
+Please report any problems and bugs to ali.mostafavian@gmail.com

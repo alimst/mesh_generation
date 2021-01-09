@@ -10,10 +10,7 @@ For further implementation details please refer to the description included in f
 ## Example ##
 Consider the "boy.png" image from the "/images" folder as shown below: 
 
-<img src="images/boy.png"> 
-
-<img src="output/boy-mesh.png" width="512">
-
+<img src="images/boy.png">
 
 A list of non-uniformly-sampled 3D points from the "boy.png" image is provided in file "/input/boy_ed_4%.dat". The "4%" in the file name means that about 4% of total number of pixels (~= 0.04\*512\*512) in the image is used. Now, consider a command line as below:
 

@@ -15,7 +15,7 @@ This program does the following:
    use the planar interpolant for the face f to compute the function value I(x,y). Then, I(x,y) must be
    rounded to nearest integer to be used as the gray-level value in the reconstructed image. 
 4- Write the sample values I(x,y) to the given output image file as the reconstructed image.
-   If OpenCV is installed, then use "#define OPENCV_INSTALLED" below (before thr header includes) to activate the
+   If OpenCV is installed, then use "#define OPENCV_INSTALLED" below (before headers includes) to activate the
    OpenCV functionality. Then, you can use any common image formats (.png, .jpg, ...) for the output image file.
    Otherwise, comment out the "#define OPENCV_INSTALLED" line and the output image is automatically stored in the .PNM format (https://en.wikipedia.org/wiki/Netpbm).
    The PNM image formats can be viewed online at: http://paulcuth.me.uk/netpbm-viewer/
@@ -41,7 +41,7 @@ For example:
     ./make_mesh -i input/lena_4%.dat -t lena_4%_tri.off -r lena_4%_img.pnm // if opencv not installed
 */
 
-//if OpenCV library is not installed in your machine, comment out line below.
+//if OpenCV library is NOT installed in your machine, comment out line below.
 //#define OPENCV_INSTALLED
 
 #include <iostream>

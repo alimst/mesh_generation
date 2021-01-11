@@ -7,7 +7,7 @@ Below is the summary of what the `make_mesh.cpp` code does in order:
 2. Generate the 2D Delaunay triangulation from the (x,y) coordinates of the input points.
 3. Rasterize the mesh to integer grid points and write the reconstructed image to the output file.
 
-For further implementation details please refer to the description included in file "make_mesh.cpp"
+Further implementation details can be found in the description included in file `make_mesh.cpp`.
 
 ## Compiler ##
 Either the `g++` compiler in Linux or with MinGW in Windows can be used to build `make_mesh.cpp`.
@@ -20,7 +20,7 @@ CGAL is required (https://doc.cgal.org/latest/Manual/general_intro.html). Since 
 GMP library (https://gmplib.org/) is required.
 
 ### OpenCV ###
-OpenCV (https://opencv.org/releases/) is optional. If OpenCV is installed any common image formats (.jpg, .png, ...) can be used for the output images.
+OpenCV (https://opencv.org/releases/) is optional. If OpenCV is installed any common image formats (.jpg, .png, ...) can be used for the output images. To enable the OpenCV functionality the `OPENVC_INSTALLED` macro must be defined in the file `include/config.hpp`. Also, in the `Makefile` set `OPENCV_INSTALLED = YES`.
 
 ## Build ##
 A Makefile is provided for building the code under Linux. To build the code, go to the directory containing both `Makefile` and `make_mesh.cpp` files and run `make` to generate the executable program `make_mesh`.
@@ -51,7 +51,7 @@ Then, the mesh is rasterized to integer grid points with the resolution same as 
 
 The PNM image format can be viewed online at: http://paulcuth.me.uk/netpbm-viewer/ or can be converted to other image formats at: https://convertio.co/pnm-png/. Just to grab your attention, this image was reconstructed using only 4% of all the pixels in the orignal image. 
 
-If OpenCV library is installed on your machine any common image formats can be used (i.e., .jpg, .png, ...) in the output image name. To enable the OpenCV functionality the "OPENVC_INSTALLED" macro must be defined in the file `include/config.hpp`.
+If OpenCV library is installed on your machine any common image formats (i.e., .jpg, .png, ...) can be used in the output image name. 
 
 ## Contact ##
 Please report any problems and bugs to ali.mostafavian@gmail.com

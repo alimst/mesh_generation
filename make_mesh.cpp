@@ -1,5 +1,5 @@
 /*
-This program does the following:
+This program does the following in order:
 1- Read a list of 3D points from input in a given text file.
    Each line in the input file is a point coordinates as: x y z
    (x,y) represents the pixel coordinates in the image I, where (0,0) is the 
@@ -15,37 +15,35 @@ This program does the following:
    use the planar interpolant for the face f to compute the function value I(x,y). Then, I(x,y) must be
    rounded to nearest integer to be used as the gray-level value in the reconstructed image. 
 4- Write the sample values I(x,y) to the given output image file as the reconstructed image.
-   If OpenCV is installed, then use "#define OPENCV_INSTALLED" below (before headers includes) to activate the
-   OpenCV functionality. Then, you can use any common image formats (.png, .jpg, ...) for the output image file.
-   Otherwise, comment out the "#define OPENCV_INSTALLED" line and the output image is automatically stored in the .PNM format (https://en.wikipedia.org/wiki/Netpbm).
+   If OpenCV is not installed, the output image is automatically stored in the .PNM format (https://en.wikipedia.org/wiki/Netpbm).
    The PNM image formats can be viewed online at: http://paulcuth.me.uk/netpbm-viewer/
    or, it can be converted to other image types at: https://convertio.co/
+   If OpenCV is installed, then enable "#define OPENCV_INSTALLED" in file "include/config.hpp" to activate the
+   OpenCV functionality. Then, you can use any common image formats (.png, .jpg, ...) in the output image file.
    
 NOTES:
-1- CGAL library is required for using this code. (https://doc.cgal.org/latest/Manual/general_intro.html)
+1- CGAL and GMP libraries are required for using this code.
+   Since CGAL version 5.0, CGAL is header-only by default, which means that there is no need to compile CGAL or its libraries before it can be used.
+   Only specify the include directory containing the "CGAL" folder in the compiler option if it's different from the system's include directory
+   /usr/include in a Linux system.
 2- OpenCV library is optional for generating the output images. Please refer to Step 4 above for further details.
 3- CGAL::Projection_traits_xy_3 is used to be able to insert 3D (x,y,z) points into the 2D Delaunay triangulation.
    Normally, Delaunay triangulation only accepts 2D (x,y) points, but with the use of the CGAL::Projection_traits_xy_3
    class as the geometric traits for the trianulation, the 3D (x,y,z) points will be first projected to xy-plane and then 
    the projected 2D points (x,y) will be used for creating the triangulation. Also, the z values will be automatically 
    stored in the vertex data structure.
-4- File ".vscodes/tasks.json" contains two build configurations: one for "windows" and one for "linux". The "windows" configuration 
-   shows an example on how to include required CGAL directories and link the libraries. The "linux" configuration provides an example on
-   how to inlucde CGAL and OpenCV directories and link the required libraries. Locations of the include and link directories must be updated
-   based on your own machine.
 
 command line usage:
     ./make_mesh -i <input_points_file> -t <output_triangulation_file> -r <output_reconstructed_image>
 For example:
-    ./make_mesh -i input/lena_4%.dat -t lena_4%_tri.off -r lena_4%_img.png // if opencv installed
-    ./make_mesh -i input/lena_4%.dat -t lena_4%_tri.off -r lena_4%_img.pnm // if opencv not installed
+    ./make_mesh -i input/lena_ed_4%.dat -t lena-tri.off -r lena-rec-img.pnm // if opencv not installed
+    ./make_mesh -i input/lena_ed_4%.dat -t lena-tri.off -r lena-rec-img.png // if opencv installed
+    
 */
-
-//if OpenCV library is NOT installed in your machine, comment out line below.
-//#define OPENCV_INSTALLED
 
 #include <iostream>
 #include <unistd.h>  //getopt
+#include "include/config.hpp"
 #include "include/MeshGeneration.hpp"
 
 char* pointsFileName; //intput file for points list

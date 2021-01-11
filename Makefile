@@ -4,7 +4,7 @@
 CXX = g++
 
 # If OpenCV is installed set below to "YES", and update the include and lib directories paths down below, otherwise set to "NO".
-OPENCV_INSTALLED = YES
+OPENCV_INSTALLED = NO
 ifeq ($(OPENCV_INSTALLED),YES) 
 OPENCV_INC_PATH = /usr/local/include/opencv4
 OPENCV_LIB_PATH = /usr/local/lib

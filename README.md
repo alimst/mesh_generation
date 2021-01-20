@@ -45,7 +45,7 @@ This command uses the `/input/boy_ed_4%.dat` file as the input to the `make_mesh
 
 <img src="output/boy-mesh.png" width="512">
 
-Then, the mesh is rasterized to integer grid points with the resolution same as the orignal image (i.e., 512\*512 grid points for `boy.png`) to reconstruct the original image. The reconstructed image is written to file `output/boy-rec-img.pnm` in PNM format as shown below:
+Then, the mesh is rasterized to integer grid points with the resolution same as the original image (i.e., 512\*512 grid points for `boy.png`) to reconstruct the original image. The reconstructed image is written to file `output/boy-rec-img.pnm` in PNM format as shown below:
 
 <img src="output/boy-rec-img.png">
 
